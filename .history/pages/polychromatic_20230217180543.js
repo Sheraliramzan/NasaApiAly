@@ -66,7 +66,6 @@ const TableImage = styled(Image)`
 `;
 const TableB = styled.div`
   display: flex;
-  border: 1px  solid #ccc;
 `;
 
 const ViewButton = styled.button`

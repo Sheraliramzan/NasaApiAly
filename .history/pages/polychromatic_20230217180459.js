@@ -64,9 +64,9 @@ const TableImage = styled(Image)`
   border: 1px solid #ccc;
   box-shadow: 2px 2px 5px #ccc;
 `;
-const TableB = styled.div`
-  display: flex;
-  border: 1px  solid #ccc;
+const TableB = style.ddiv`
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px #ccc;
 `;
 
 const ViewButton = styled.button`

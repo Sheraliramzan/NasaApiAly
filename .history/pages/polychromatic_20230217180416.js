@@ -64,10 +64,6 @@ const TableImage = styled(Image)`
   border: 1px solid #ccc;
   box-shadow: 2px 2px 5px #ccc;
 `;
-const TableB = styled.div`
-  display: flex;
-  border: 1px  solid #ccc;
-`;
 
 const ViewButton = styled.button`
   font-size: 1rem;
@@ -157,7 +153,7 @@ export default function Polychromatic() {
                   <TableCell>
                     <Image src={e.image} alt={i} width={180} height={130} />
                   </TableCell>
-                </TableB>
+                </Table>
                 <div>
                   <Td>
                     <ViewButton

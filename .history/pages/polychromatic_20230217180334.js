@@ -64,14 +64,10 @@ const TableImage = styled(Image)`
   border: 1px solid #ccc;
   box-shadow: 2px 2px 5px #ccc;
 `;
-const TableB = styled.div`
-  display: flex;
-  border: 1px  solid #ccc;
-`;
 
 const ViewButton = styled.button`
   font-size: 1rem;
-  background-color: lightblue;
+  background-color: light;
   color: #fff;
   border-radius: 5px;
   padding: 0.5rem 1rem;
@@ -150,14 +146,14 @@ export default function Polychromatic() {
           {images.map((e, i) => {
             return (
               <tr key={i}>
-                <TableB>
+                <div>
                   <TableCell>{e.time}</TableCell>
                   <TableCell>{e.coords.lat}</TableCell>
                   <TableCell>{e.coords.lon}</TableCell>
                   <TableCell>
                     <Image src={e.image} alt={i} width={180} height={130} />
                   </TableCell>
-                </TableB>
+                </div>
                 <div>
                   <Td>
                     <ViewButton
