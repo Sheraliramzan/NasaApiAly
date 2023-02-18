@@ -74,21 +74,21 @@ export default function Polychromatic() {
         </div>
 
         <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-blue-500">
+          <thead className="bg-blue-200">
             <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-lime-500 uppercase tracking-wider">
                 Time
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-lime-500 uppercase tracking-wider">
                 Lattitude
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-lime-500 uppercase tracking-wider">
                 Longitude
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-lime-500 uppercase tracking-wider">
                 Image
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-lime-500 uppercase tracking-wider">
                 View
               </th>
             </tr>

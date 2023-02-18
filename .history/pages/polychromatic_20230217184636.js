@@ -88,7 +88,7 @@ export default function Polychromatic() {
               <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
                 Image
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-lime-500 uppercase tracking-wider">
                 View
               </th>
             </tr>

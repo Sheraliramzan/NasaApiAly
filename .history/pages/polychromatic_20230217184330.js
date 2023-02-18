@@ -50,7 +50,7 @@ export default function Polychromatic() {
   }, []);
 
   return (
-    <div className="bg-blue-200">
+    <div className="bg-">
       <h1 className="text-3xl font-bold text-center mb-8 py-4 text-lime-600">
         Polychromatic
       </h1>
@@ -74,21 +74,21 @@ export default function Polychromatic() {
         </div>
 
         <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-blue-500">
+          <thead className="bg-gray-50">
             <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Time
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Lattitude
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Longitude
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Image
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 View
               </th>
             </tr>

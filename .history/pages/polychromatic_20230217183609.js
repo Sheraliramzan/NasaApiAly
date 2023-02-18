@@ -50,13 +50,13 @@ export default function Polychromatic() {
   }, []);
 
   return (
-    <div className="bg-blue-200">
-      <h1 className="text-3xl font-bold text-center mb-8 py-4 text-lime-600">
+    <>
+      <h1 className="text-3xl font-bold text-center mb-8 py-4">
         Polychromatic
       </h1>
       <div>
         <div className="flex flex-col items-center justify-center">
-          <div className="bg-lime-600 rounded-lg shadow-lg p-4">
+          <div className="bg-white rounded-lg shadow-lg p-4">
             <Image
               src={image}
               alt={image}
@@ -65,30 +65,30 @@ export default function Polychromatic() {
               className="rounded-lg"
             />
           </div>
-          <div className="mt-5 text-center">
+          <div className="mt-4 text-center">
             <div className="font-medium">{time}</div>
-            <div className="text-lime-500">
+            <div className="text-gray-500">
               {coords[0]}, {coords[1]}
             </div>
           </div>
         </div>
 
         <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-blue-500">
+          <thead className="bg-gray-50">
             <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Time
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Lattitude
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Longitude
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Image
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-lime-100 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 View
               </th>
             </tr>
@@ -121,7 +121,7 @@ export default function Polychromatic() {
                           setCoords([o.coords.lat, o.coords.lon]);
                           document.body.scrollIntoView({ behavior: "smooth" });
                         }}
-                        className="bg-emerald-500 hover:bg-blue-700 text-black font-bold py-3 px-6 rounded"
+                        className="bg-emerald-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                       >
                         View
                       </button>
@@ -132,6 +132,6 @@ export default function Polychromatic() {
           </tbody>
         </table>
       </div>
-    </div>
+    </>
   );
 }
