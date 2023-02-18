@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Th, Td } from "@/styles/styles";
 import Image from "next/image";
 import styled from "styled-components";
 
@@ -8,7 +7,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  judtify-content: center;
   margin-top: 2rem;
 `;
 
@@ -48,7 +46,6 @@ const Table = styled.table`
 const TableRow = styled.tr`
   display: flex;
   justify-content: space-between;
-  width: 100%;
   align-items: center;
   margin-bottom: 1rem;
 `;
@@ -147,12 +144,12 @@ export default function Polychromatic() {
             return (
               <tr key={i}>
                 <div>
-                  <TableCell>{e.time}</TableCell>
-                  <TableCell>{e.coords.lat}</TableCell>
-                  <TableCell>{e.coords.lon}</TableCell>
+                  <TableCell>{e.time}</Td>
+                  <TableCell>{e.coords.lat}</Td>
+                  <TableCell>{e.coords.lon}</Td>
                   <TableCell>
                     <Image src={e.image} alt={i} width={180} height={130} />
-                  </TableCell>
+                  </Td>
                 </div>
                 <div>
                   <Td>

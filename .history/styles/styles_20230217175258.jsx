@@ -32,7 +32,7 @@ export const Th = styled.th`
 `;
 
 export const Td = styled.td`
-    width: 100%;
+`width: 100%;
   padding: 8px;
   justify-content: center;
   align-items: center;
@@ -40,4 +40,17 @@ export const Td = styled.td`
   border: 1px solid #ddd;
 `;
 
+export const ViewButton = styled.button`
+  background-color: lightblue;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+`;
 

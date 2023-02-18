@@ -1,78 +1,9 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { Th, Td } from "@/styles/styles";
-import Image from "next/image";
+import styles from "@/styles/Home.module.css";
 import styled from "styled-components";
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  judtify-content: center;
-  margin-top: 2rem;
-`;
-
-
-const ImageContainer = styled.div`
-  margin: 2rem 0;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 5px #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 200px;
-  height: 120px;
-`;
-
-const Time = styled.p`
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-`;
-
-const Coords = styled.p`
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-`;
-
-const TableContainer = styled.div`
-  overflow-x: auto;
-  margin-top: 2rem;
-`;
-
-const Table = styled.table`
-  width: 100%;
-  border-collapse: collapse;
-`;
-
-const TableRow = styled.tr`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-  margin-bottom: 1rem;
-`;
-
-const TableCell = styled.td`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem;
-`;
-
-const TableImage = styled(Image)`
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 5px #ccc;
-`;
-
-const ViewButton = styled.button`
-  font-size: 1rem;
-  background-color: #5f5f5f;
-  color: #fff;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-`;
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { Container, TableContainer, Table, Th, Td, ImageContainer, ViewButton } from "@/styles/styles";
 
 export default function Polychromatic() {
   const [image, setImage] = useState([]);
@@ -107,7 +38,7 @@ export default function Polychromatic() {
       images.push({
         image: image,
         time: time,
-        coords: coords
+        coords: coords,
       });
     }
 
@@ -117,7 +48,6 @@ export default function Polychromatic() {
     setTime(time[0]);
     setCoords([images[0].coords.lat, images[0].coords.lon]);
   };
-
   useEffect(() => {
     getPolychromaticData();
   }, []);
@@ -127,32 +57,32 @@ export default function Polychromatic() {
 
       <Image src={image} alt={image} width={200} height={120} />
         </ImageContainer>
-      <Time>{time}</Time>
-      <Coords>
+      <div>{time}</div>
+      <div>
         {coords[0]}, {coords[1]}
-      </Coords>
+      </div>
 
     <TableContainer>
       <Table>
         <thead>
-          <TableRow>
+          <tr>
             <Th>Time</Th>
             <Th>Latitude</Th>
             <Th>Longitude</Th>
             <Th>Image</Th>
-          </TableRow>
+          </tr>
         </thead>
         <tbody>
           {images.map((e, i) => {
             return (
               <tr key={i}>
                 <div>
-                  <TableCell>{e.time}</TableCell>
-                  <TableCell>{e.coords.lat}</TableCell>
-                  <TableCell>{e.coords.lon}</TableCell>
-                  <TableCell>
+                  <Td>{e.time}</Td>
+                  <Td>{e.coords.lat}</Td>
+                  <Td>{e.coords.lon}</Td>
+                  <Td>
                     <Image src={e.image} alt={i} width={180} height={130} />
-                  </TableCell>
+                  </Td>
                 </div>
                 <div>
                   <Td>
@@ -179,3 +109,4 @@ export default function Polychromatic() {
   );
 }
 
+style it ple

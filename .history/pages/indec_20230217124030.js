@@ -1,28 +1,31 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Th, Td } from "@/styles/styles";
 import Image from "next/image";
+import {
+  Container,
+  TableContainer,
+  Table,
+  Th,
+  Td,
+  ImageContainer,
+  ViewButton
+} from "@/styles/styles";
 import styled from "styled-components";
 
-const Container = styled.div`
+const Wrapper = styled(Container)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  judtify-content: center;
   margin-top: 2rem;
 `;
 
+const Title = styled.h1`
+  font-size: 2rem;
+  margin-bottom: 1rem;
+`;
 
-const ImageContainer = styled.div`
+const ImageWrapper = styled(ImageContainer)`
   margin: 2rem 0;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 5px #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 200px;
-  height: 120px;
 `;
 
 const Time = styled.p`
@@ -35,29 +38,17 @@ const Coords = styled.p`
   margin-bottom: 2rem;
 `;
 
-const TableContainer = styled.div`
-  overflow-x: auto;
-  margin-top: 2rem;
-`;
-
-const Table = styled.table`
-  width: 100%;
-  border-collapse: collapse;
-`;
-
 const TableRow = styled.tr`
   display: flex;
   justify-content: space-between;
-  width: 100%;
   align-items: center;
   margin-bottom: 1rem;
 `;
 
-const TableCell = styled.td`
+const TableCell = styled(Td)`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem;
 `;
 
 const TableImage = styled(Image)`
@@ -65,7 +56,13 @@ const TableImage = styled(Image)`
   box-shadow: 2px 2px 5px #ccc;
 `;
 
-const ViewButton = styled.button`
+const ViewButtonWrapper = styled(Td)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ViewButtonStyled = styled(ViewButton)`
   font-size: 1rem;
   background-color: #5f5f5f;
   color: #fff;
@@ -121,61 +118,3 @@ export default function Polychromatic() {
   useEffect(() => {
     getPolychromaticData();
   }, []);
-  return (
-    <Container>
-        <ImageContainer>
-
-      <Image src={image} alt={image} width={200} height={120} />
-        </ImageContainer>
-      <Time>{time}</Time>
-      <Coords>
-        {coords[0]}, {coords[1]}
-      </Coords>
-
-    <TableContainer>
-      <Table>
-        <thead>
-          <TableRow>
-            <Th>Time</Th>
-            <Th>Latitude</Th>
-            <Th>Longitude</Th>
-            <Th>Image</Th>
-          </TableRow>
-        </thead>
-        <tbody>
-          {images.map((e, i) => {
-            return (
-              <tr key={i}>
-                <div>
-                  <TableCell>{e.time}</TableCell>
-                  <TableCell>{e.coords.lat}</TableCell>
-                  <TableCell>{e.coords.lon}</TableCell>
-                  <TableCell>
-                    <Image src={e.image} alt={i} width={180} height={130} />
-                  </TableCell>
-                </div>
-                <div>
-                  <Td>
-                    <ViewButton
-                      onClick={() => {
-                        setImage(e.image);
-                        setTime(e.time);
-                        setCoords(e.coords.lat, e.coords.lon);
-                        document.body.scrollIntoView();
-                      }}
-                    >
-                      {" "}
-                      View Here
-                    </ViewButton>
-                  </Td>
-                </div>
-              </tr>
-            );
-          })}
-        </tbody>
-      </Table>
-      </TableContainer>
-    </Container>
-  );
-}
-

@@ -1,29 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Th, Td } from "@/styles/styles";
 import Image from "next/image";
 import styled from "styled-components";
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  judtify-content: center;
-  margin-top: 2rem;
-`;
-
-
-const ImageContainer = styled.div`
-  margin: 2rem 0;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 5px #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 200px;
-  height: 120px;
-`;
 
 const Time = styled.p`
   font-size: 1.2rem;
@@ -48,7 +26,6 @@ const Table = styled.table`
 const TableRow = styled.tr`
   display: flex;
   justify-content: space-between;
-  width: 100%;
   align-items: center;
   margin-bottom: 1rem;
 `;
@@ -122,37 +99,37 @@ export default function Polychromatic() {
     getPolychromaticData();
   }, []);
   return (
-    <Container>
+    <Conainer>
         <ImageContainer>
 
       <Image src={image} alt={image} width={200} height={120} />
         </ImageContainer>
-      <Time>{time}</Time>
-      <Coords>
+      <div>{time}</div>
+      <div>
         {coords[0]}, {coords[1]}
-      </Coords>
+      </div>
 
     <TableContainer>
       <Table>
         <thead>
-          <TableRow>
+          <tr>
             <Th>Time</Th>
             <Th>Latitude</Th>
             <Th>Longitude</Th>
             <Th>Image</Th>
-          </TableRow>
+          </tr>
         </thead>
         <tbody>
           {images.map((e, i) => {
             return (
               <tr key={i}>
                 <div>
-                  <TableCell>{e.time}</TableCell>
-                  <TableCell>{e.coords.lat}</TableCell>
-                  <TableCell>{e.coords.lon}</TableCell>
-                  <TableCell>
+                  <Td>{e.time}</Td>
+                  <Td>{e.coords.lat}</Td>
+                  <Td>{e.coords.lon}</Td>
+                  <Td>
                     <Image src={e.image} alt={i} width={180} height={130} />
-                  </TableCell>
+                  </Td>
                 </div>
                 <div>
                   <Td>
@@ -175,7 +152,7 @@ export default function Polychromatic() {
         </tbody>
       </Table>
       </TableContainer>
-    </Container>
+    </Wrapper>
   );
 }
 

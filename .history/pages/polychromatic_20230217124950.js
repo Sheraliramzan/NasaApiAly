@@ -8,7 +8,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  judtify-content: center;
   margin-top: 2rem;
 `;
 
@@ -48,7 +47,6 @@ const Table = styled.table`
 const TableRow = styled.tr`
   display: flex;
   justify-content: space-between;
-  width: 100%;
   align-items: center;
   margin-bottom: 1rem;
 `;
