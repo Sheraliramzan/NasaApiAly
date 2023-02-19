@@ -98,14 +98,14 @@ export default function Polychromatic() {
               images.map((o, index) => {
                 return (
                   <tr key={index}>
-                    <td className="px-6 py-4 whitespace-nowrap bg-blue-200">{o.time}</td>
-                    <td className="px-6 py-4 whitespace-nowrap bg-blue-200">
+                    <td className="px-6 py-4 whitespace-nowrap bg-blue-500">{o.time}</td>
+                    <td className="px-6 py-4 whitespace-nowrap">
                       {o.coords.lat}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap bg-blue-200">
+                    <td className="px-6 py-4 whitespace-nowrap">
                       {o.coords.lon}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap bg-blue-200">
+                    <td className="px-6 py-4 whitespace-nowrap">
                       <Image
                         src={o.image}
                         alt={o.image}
@@ -113,7 +113,7 @@ export default function Polychromatic() {
                         height={100}
                       />
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap bg-blue-200">
+                    <td className="px-6 py-4 whitespace-nowrap">
                       <button
                         onClick={() => {
                           setImage(o.image);
@@ -121,7 +121,7 @@ export default function Polychromatic() {
                           setCoords([o.coords.lat, o.coords.lon]);
                           document.body.scrollIntoView({ behavior: "smooth" });
                         }}
-                        className="bg-lime-600 hover:bg-blue-700 text-black font-bold py-3 px-6 rounded"
+                        className="bg-emerald-500 hover:bg-blue-700 text-black font-bold py-3 px-6 rounded"
                       >
                         View
                       </button>

@@ -121,7 +121,7 @@ export default function Polychromatic() {
                           setCoords([o.coords.lat, o.coords.lon]);
                           document.body.scrollIntoView({ behavior: "smooth" });
                         }}
-                        className="bg-lime-600 hover:bg-blue-700 text-black font-bold py-3 px-6 rounded"
+                        className="bg-emerald-500 hover:bg-blue-700 text-black font-bold py-3 px-6 rounded"
                       >
                         View
                       </button>
